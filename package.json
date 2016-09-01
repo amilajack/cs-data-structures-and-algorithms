@@ -1,7 +1,7 @@
 {
-  "name": "CS46B",
+  "name": "cs-data-structures-and-algorhtims",
   "version": "1.0.0",
-  "description": "Data Structures and Algorithms Homework",
+  "description": "Data Structures and Algorithms Homework and Problems",
   "main": "index.js",
   "directories": {
     "example": "examples"
