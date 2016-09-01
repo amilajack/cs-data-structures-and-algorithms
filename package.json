@@ -1,0 +1,15 @@
+{
+  "name": "CS46B",
+  "version": "1.0.0",
+  "description": "Data Structures and Algorithms Homework",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "start": "java examples.polymorphisim.SubClass"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
