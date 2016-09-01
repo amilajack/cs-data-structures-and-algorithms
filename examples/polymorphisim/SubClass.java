@@ -13,7 +13,12 @@ class SubClass extends SuperClass {
 
   /**
    * This method overrides the SuperClass method `exampleInheritedMethod` and will be printed
+   *
+   * @NOTE: The `@Override` above the method is called an 'annotation' in Java.
+   *        It is not required but is a convention, since it makes understanding
+   *        code easier.
    */
+  @Override
   public void exampleOverridenMethod() {
     System.out.print(
       "This method overrides the SuperClass method `exampleInheritedMethod` and will be printed\n"
