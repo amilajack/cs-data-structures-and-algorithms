@@ -53,3 +53,4 @@ release
 
 # Java
 *.class
+bin
