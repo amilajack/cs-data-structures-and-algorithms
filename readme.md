@@ -8,7 +8,7 @@ class.
 * Inner classes (not subclasses)
 * Recursion
 * Functional Programming
- * Lamdas
+ * Lambdas
  * Functional Purity
  * Immutability
  * Referential Transparency
