@@ -54,3 +54,5 @@ release
 # Java
 *.class
 bin
+.idea
+.settings

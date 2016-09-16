@@ -1,0 +1,5 @@
+package transport;
+
+class MassRover extends Unmanned {
+
+}

@@ -1,0 +1,8 @@
+package transport;
+
+public class UnmannedVehicle extends Vehicle {
+	UnmannedVehicle() {
+        System.out.println("UnmannedVehiclector");
+		super(4);
+	}
+}
