@@ -15,13 +15,12 @@ public class ListFilmArchive extends ArrayList<Movie> implements FilmArchive {
 
   @Override
   public boolean add(Movie movie) {
-    // TODO Auto-generated method stub
     for (Movie m : this) {
       if (m.equals(movie)) {
         return false;
       }
     }
-    
+
     super.add(movie);
 
     return true;
@@ -29,6 +28,7 @@ public class ListFilmArchive extends ArrayList<Movie> implements FilmArchive {
 
   public static void main(String[] args) {
     ListFilmArchive archive = new ListFilmArchive();
+
     for (Movie m: Movie.getTestMovies()) {
       archive.add(m);
     }

@@ -15,13 +15,14 @@ public class HashFilmArchive extends HashSet<Movie> implements FilmArchive {
 
   public static void main(String[] args) {
     HashFilmArchive archive = new HashFilmArchive();
+
     for (Movie m: Movie.getTestMovies()) {
       archive.add(m);
     }
     for (Movie m: archive) {
       System.out.println(m);
     }
-    
+
     System.out.println(archive.size());
   }
 }
