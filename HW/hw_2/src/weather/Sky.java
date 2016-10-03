@@ -26,25 +26,22 @@ public class Sky {
   }
 
   public static void main(String[] args) {
+    Sky sky = new Sky();
     StratusCloud strat = new StratusCloud(100, 1000);
+    CumulusCloud cumu = new CumulusCloud(200, 2000);
+    CirrusCloud cirr = new CirrusCloud(300, 3000);
 
     if (!strat.rain().startsWith("It is raining")) {
       System.out.println("Bad StratusCloud::rain");
     }
 
-    CumulusCloud cumu = new CumulusCloud(200, 2000);
-
     if (!cumu.rain().startsWith("It is raining")) {
       System.out.println("Bad CumulusCloud::rain");
     }
 
-    CirrusCloud cirr = new CirrusCloud(300, 3000);
-
     if (!cirr.rain().startsWith("I cannot make")) {
       System.out.println("Bad CirrusCloud::rain");
     }
-
-    Sky sky = new Sky();
 
     sky.add(strat);
     sky.add(cumu);
