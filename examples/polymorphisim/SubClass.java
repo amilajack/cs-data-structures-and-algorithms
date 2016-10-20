@@ -25,10 +25,6 @@ class SubClass extends SuperClass {
     );
   }
 
-  public static void some() {
-    System.out.print("SLDFSLKD");
-  }
-
   /**
    * Main is what actually runs the java program.
    */

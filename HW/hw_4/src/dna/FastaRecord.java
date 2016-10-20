@@ -15,8 +15,6 @@ public class FastaRecord implements Comparable<FastaRecord>, DNARecord {
     this.sequence = sequence;
 
     if (this.defline.charAt(0) != '>') {
-      System.out.println("The first line of this fasta does not start with >");
-      System.out.println(this.defline);
       throw new FastqException(
         "Bad 1st char in defline in fastq record: saw X, expected @"
       );

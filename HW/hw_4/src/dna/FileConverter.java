@@ -51,8 +51,6 @@ public class FileConverter
 
 				FastaRecord faRecord = new FastaRecord(fqRecord);
 
-				System.out.println(fqRecord.getDefline());
-
 				if (fqRecord.qualityIsHigh() == false) {
 					continue;
 				}
