@@ -1,7 +1,7 @@
 package sudoku;
 
 import java.util.*;
-
+import java.util.ArrayList;
 
 public class Grid
 {
@@ -109,9 +109,48 @@ public class Grid
   {
     return (
       this.checkRow(this.values) &&
-      this.checkColumn(this.values)
-      // this.checkGrid(this.values)
+      this.checkColumn(this.values) &&
+      this.checkGrid(this.values)
     );
+  }
+
+  private int[][] dupeRight(int[][] array) {
+    int[][] some = array.clone();
+
+    for (int i = 0; i < 9; i++) {
+      some[i] = {some[i][0] + 3, each[1]};
+    }
+  }
+
+  // private int[][] dupeBottom(int[][] array) {
+  //   return array.map(each => [each[0], each[1] + 3]);
+  // }
+
+  private boolean checkGrid() {
+    ArrayList items = new ArrayList();
+
+    int[][] some = {
+      {3,0}, {4,0}, {5,0},
+      {3,1}, {4,1}, {5,1},
+      {3,2}, {4,2}, {5,2}
+    };
+
+    items.add(some);
+
+    for (int start = 0; start < 3; start++) {
+      for (int inner = 0; inner < 3; inner++) {
+        if (start == 0 && inner == 0) {
+          continue;
+        }
+
+        if (items.size() % 3 == 0) {
+          items.push(dupeBottom(items[items.size() - 3]));
+          continue;
+        }
+
+        items.push(dupeRight(items[items.size() - 1]));
+      }
+    }
   }
 
   /**
@@ -129,6 +168,8 @@ public class Grid
         if (m.contains(current)) {
           return false;
         }
+
+        m.add(current);
 
         if (current != 0) {
           m.add(current);
@@ -154,23 +195,6 @@ public class Grid
 
         if (current != 0) {
           m.add(current);
-        }
-      }
-    }
-
-    return true;
-  }
-
-  /**
-   * Check if the grid is valid. Return false if incorrect and true if correct
-   */
-  private boolean checkGrid(int[][] x) {
-    for (int j=0; j<9; j++)
-    {
-      for (int i=0; i<9; i++)
-      {
-        if (x[j][i] < 1 && x[j][i] > 9) {
-          return false;
         }
       }
     }
